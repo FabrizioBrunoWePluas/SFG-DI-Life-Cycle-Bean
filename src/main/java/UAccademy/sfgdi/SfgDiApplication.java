@@ -31,7 +31,7 @@ public class SfgDiApplication {
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
 
-		System.out.println("------------Another Bean without Qualifier");
+		System.out.println("------------Another Bean without Qualifi er");
 
 		AnotherInjectedController anotherInjectedController = (AnotherInjectedController) ctx.getBean("anotherInjectedController");
 		System.out.println(anotherInjectedController.getGreeting());
