@@ -1,6 +1,6 @@
 package UAccademy.sfgdi.controllers;
 
-import UAccademy.sfgdi.service.ConstructorGreetingService;
+import UAccademy.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
