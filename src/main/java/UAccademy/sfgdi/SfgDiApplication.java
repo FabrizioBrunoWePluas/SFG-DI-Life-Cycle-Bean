@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"UAccademy.sfgdi","com.springframewoke.pet"})
+//@ComponentScan(basePackages = {"UAccademy.sfgdi","com.springframewoke.pet"})
 @SpringBootApplication
 public class SfgDiApplication {
 
