@@ -3,9 +3,7 @@ package UAccademy.sfgdi.controllers;
 import com.springframewoke.pet.PetService;
 import org.springframework.stereotype.Controller;
 
-/**
- * Created by jt on 12/28/19.
- */
+
 @Controller
 public class PetController {
 
