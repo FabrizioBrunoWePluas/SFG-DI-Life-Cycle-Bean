@@ -1,15 +1,42 @@
 package UAccademy.sfgdi.config;
 
+import UAccademy.sfgdi.datasource.FakeDataSource;
 import UAccademy.sfgdi.repositories.EnglishGreetingRepository;
 import UAccademy.sfgdi.repositories.EnglishGreetingRepositoryImpl;
 import UAccademy.sfgdi.services.*;
 import com.springframewoke.pet.PetService;
 import com.springframewoke.pet.PetServiceFActory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
+//@PropertySource("classpath:datasource.properties")
 @ImportResource("classpath:sfgdi-config.xml")
 @Configuration
 public class GreetingServiceConfig {
+
+
+    @Bean
+    FakeDataSource fakeDataSource(@Value("${uaccademy.username}") String username,
+                                  @Value("${uaccademy.password}") String password,
+                                  @Value("${uaccademy.jdbcurl}") String jdbcurl){
+        FakeDataSource fakeDataSource = new FakeDataSource();
+        fakeDataSource.setUsername(username);
+        fakeDataSource.setPassword(password);
+        fakeDataSource.setJdbcurl(jdbcurl);
+        return fakeDataSource;
+    }
+
+//    @Bean
+//    FakeDataSource fakeDataSource(@Value("superuser") String username,
+//                                  @Value("dbPassoword") String password,
+//                                  @Value("someUrlforDB") String jdbcurl){
+//        FakeDataSource fakeDataSource = new FakeDataSource();
+//        fakeDataSource.setUsername(username);
+//        fakeDataSource.setPassword(password);
+//        fakeDataSource.setJdbcurl(jdbcurl);
+//        return fakeDataSource;
+//    }
+
 
     @Bean
     PetServiceFActory petServiceFActory(){
